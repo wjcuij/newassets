@@ -7,8 +7,12 @@ const routerDefault = [{
     component:() =>import('@/pages/index')
 },{
     path:'/login',
-    name:'index',
+    name:'login',
     component:() =>import('@/pages/login')
+},{
+    path:'/assemble',
+    name:'assemble',
+    component:() =>import('@/pages/assemble')
 }]
 Vue.use(Router)
 const mainRouter = new Router({

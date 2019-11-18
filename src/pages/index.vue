@@ -16,7 +16,7 @@
                 </van-search>
             </li>
             <li>
-                <router-link to="/"><img src="@/assets/icon-img/suotou.png" alt=""></router-link>
+                <router-link to="/"><img src="@/assets/icon-img/user.png" alt="" style="width:40px;height:40px;"></router-link>
             </li>
         </ul>
         <ul class="project">
@@ -29,7 +29,7 @@
                     </span>
                      <b>39</b>
                 </div>
-                <img src="@/assets/implogo.png" alt="">
+                <img src="@/assets/imp-logo.png" alt="">
             </li>
             <li>
                 <div class="details">
@@ -40,7 +40,7 @@
                     </span>
                      <b>39</b>
                 </div>
-                <img src="@/assets/implogo.png" alt="">
+                <img src="@/assets/qyj-logo.png" alt="">
             </li>
             <li>
                 <div class="details">
@@ -51,7 +51,7 @@
                     </span>
                      <b>39</b>
                 </div>
-                <img src="@/assets/implogo.png" alt="">
+                <img src="@/assets/yj-logo.png" alt="">
             </li>
             <li>
                 <div class="details">
@@ -62,7 +62,7 @@
                     </span>
                      <b>39</b>
                 </div>
-                <img src="@/assets/implogo.png" alt="">
+                <img src="@/assets/ck-logo.png" alt="">
             </li>
             <li>
                 <div class="details">
@@ -73,9 +73,10 @@
                     </span>
                      <b>39</b>
                 </div>
-                <img src="@/assets/implogo.png" alt="">
+                <img src="@/assets/bf-logo.png" alt="">
             </li>
         </ul>
+        <button class="add-btn">增加项目</button>
     </div>
 </template>
 <style lang="scss">
@@ -137,6 +138,9 @@
     font-size:18px;
     color:#fff;
 }
+.project li{
+    border-radius: 10px;
+}
 .project li:nth-child(1){
     background:#5cc6fa;
 }
@@ -145,6 +149,12 @@
 }
 .project li:nth-child(3){
       background-image: -webkit-linear-gradient(0deg,#c557d3,#9a6ce5,#8674ec); 
+}
+.project li:nth-child(4){
+      background-image: -webkit-linear-gradient(0deg,#fdb560,#f59e5b,#ee8557); 
+}
+.project li:nth-child(5){
+      background-image: -webkit-linear-gradient(0deg,#fde15f,#f6cb56,#eeb04c); 
 }
 .project li{
     display:flex;
@@ -161,6 +171,18 @@
     top: -20px;
     box-shadow: 5px 6px 15px 1px;
     border-radius:100%;
+    width:90px;
+    height:90px;
+}
+.add-btn{
+    width:100%;
+    color:#fff;
+    font-size:16px;
+    border:none;
+    border-radius: 10px;
+    height:50px;
+    margin:20px 0;
+    background-image: -webkit-linear-gradient(0deg,#7be0f4,#6be6f8,#628bfb); 
 }
 </style>
 
