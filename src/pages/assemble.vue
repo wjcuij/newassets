@@ -9,7 +9,7 @@
                             <div class="assets-details">
                                 <span>资产名称：灰色沙发</span>
                                 <span>资产类别：办公用品</span>
-                                <span>资产数量：14</span>
+                                <span>资产数量：114</span>
                                 <span>计量单位：张</span>
                             </div>
                             

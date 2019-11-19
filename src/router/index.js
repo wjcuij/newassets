@@ -12,7 +12,14 @@ const routerDefault = [{
 },{
     path:'/assemble',
     name:'assemble',
-    component:() =>import('@/pages/assemble')
+    component:() =>import('@/pages/assemble'),
+    meta:{
+        title:'资产汇总'
+    }
+},{
+    path:'/assemble/detail',
+    name:'assemble-detail',
+    component:() =>import('@/pages/assemble-detail')
 }]
 Vue.use(Router)
 const mainRouter = new Router({
