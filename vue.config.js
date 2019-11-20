@@ -1,8 +1,8 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-function resolve (dir) {
-    return path.join(__dirname, dir)
-}
+// const path = require('path');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// function resolve (dir) {
+//     return path.join(__dirname, dir)
+// }
 module.exports = {
     runtimeCompiler:true,
     // chainWebpack: config => {

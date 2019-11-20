@@ -1,0 +1,117 @@
+<template>
+    <div>
+        <ul>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="资产编码"
+    placeholder="请输入资产编码"
+    error
+  />
+  </van-cell-group></li>
+            <li>资产类别</li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="资产名称"
+    placeholder="请输入资产名称"
+    error
+  /></van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="规格型号"
+    placeholder="请输入规格型号"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="计量单位"
+    placeholder="请输入计量单位"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="SN号"
+    placeholder="请输入SN号"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="金额"
+    placeholder="请输入金额"
+    error
+  />
+  </van-cell-group>金额</li>
+            <li>存放项目</li>
+            <li>存放地点</li>
+            <li>购入日期</li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="使用人"
+    placeholder="请输入使用人"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="供应商"
+    placeholder="请输入供应商"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="username"
+    label="来源"
+    placeholder="请输入来源"
+    error
+  />
+  </van-cell-group></li>
+            <li><van-cell-group>
+  <van-field
+    v-model="message"
+    rows="1"
+    autosize
+    label="备注"
+    type="textarea"
+    placeholder="请输入备注"
+  />
+</van-cell-group>
+            </li>
+            <li>
+                <span>上传图片</span>
+                
+            </li>
+        </ul>
+    </div>
+</template>
+<style lang="scss">
+
+</style>
+<script>
+import Vue from 'vue';
+import { Field,Uploader } from 'vant';
+
+Vue.use(Field).use(Uploader);
+export default {
+    data(){
+        return{
+            username:'',
+            message:''
+        }
+    },
+    onload(){
+        document.title = '新增资产1'
+    }
+}
+</script>
+

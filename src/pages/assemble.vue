@@ -2,32 +2,59 @@
     <div id="assemble">
         <van-tabs v-model="active" class="assets-tabs">
             <van-tab title="资产汇总">
-                <van-collapse v-model="activeNames" accordion>
-                    <van-collapse-item name="1">
-                        <div slot="title" class="assets-name">
-                            <img src="@/assets/140809.jpeg" alt="">
-                            <div class="assets-details">
-                                <span>资产名称：灰色沙发</span>
-                                <span>资产类别：办公用品</span>
-                                <span>资产数量：114</span>
-                                <span>计量单位：张</span>
-                            </div>
-                            
-                            <!-- <van-icon name="question-o" /> -->
-                        </div>
-                        内容
-                    </van-collapse-item>
-
-                    <van-collapse-item title="标题2" name="2" icon="shop-o">
-                        内容
-                    </van-collapse-item>
-                </van-collapse>
+                <router-link to="/assemble/detail" tag="div" class="assets-name assets-cell">
+                    <img src="@/assets/140809.jpeg" alt="">
+                    <div class="assets-details">
+                        <span>资产名称：灰色沙发</span>
+                        <span>资产类别：办公用品</span>
+                        <span>资产数量：114</span>
+                        <span>计量单位：张</span>
+                    </div>
+                </router-link>
+                <router-link to="/assemble/detail" tag="div" class="assets-name assets-cell">
+                    <img src="@/assets/140809.jpeg" alt="">
+                    <div class="assets-details">
+                        <span>资产名称：灰色沙发</span>
+                        <span>资产类别：办公用品</span>
+                        <span>资产数量：114</span>
+                        <span>计量单位：张</span>
+                    </div>
+                </router-link>
             </van-tab>
-            <van-tab title="房间汇总">内容 2</van-tab>
+            <van-tab title="房间汇总">
+                <div style="padding:0 10px;">
+                    <div class="room">
+                            <div class="room-detail">
+                                <img src="@/assets/140809.jpeg" alt="">
+                                <div class="room-txt">
+                                    <span>青云居B栋508</span>
+                                    <div class="room-describe">
+                                        <span>房型：<br><b>二房一厅</b></span>
+                                        <span>资产数量：<br><b>10</b></span>
+                                        <span>面积：<br><b>120m²</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room">
+                            <div class="room-detail">
+                                <img src="@/assets/140809.jpeg" alt="">
+                                <div class="room-txt">
+                                    <span>青云居B栋508</span>
+                                    <div class="room-describe">
+                                        <span>房型：<br><b>二房一厅</b></span>
+                                        <span>资产数量：<br><b>10</b></span>
+                                        <span>面积：<br><b>120m²</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </van-tab>
         </van-tabs>
     </div>
 </template>
-<style>
+<style lang="scss">
 #assemble{
     background-color:#f5f6f9;
 }
@@ -60,6 +87,52 @@ text-align:left;
     display: inline-block;
     margin-right:20px;
 }
+/*房间汇总*/
+.room{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #fff;
+       text-align: left;
+    color:#727272;
+    flex-direction: column;
+    border-radius: 10px;
+    margin:5px 0;
+img{
+    width:70px;
+    height:70px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right:20px;
+}
+.room-describe{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.room-describe b{
+    font-size: 14px;
+}
+.room-detail{
+    display: flex;
+    margin:5px 0;
+}
+.room-txt{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.room-txt>span{
+    color:#2e2e2e;
+    font-size:16px;
+    
+}
+}
 /*修改框架样式*/
 .van-tab:nth-child(1){
     position: relative;
@@ -80,13 +153,16 @@ text-align:left;
 .van-tab--active {
   color: #6088ff;
 }
-.van-cell{
+.assets-cell{
     /* padding-left:0;
     padding-right: 0;
     margin:0 16px; */
     position: relative;
+    background:#fff;
+    padding:10px 16px;
+    margin-top:5px;
 }
-.van-cell::before{
+.assets-cell::before{
     content: '';
     position: absolute;
     top:0;
