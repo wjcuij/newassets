@@ -67,7 +67,14 @@ const routerDefault = [{
             }
         }
     ]
-}]
+},{
+    path:'/warehouse',
+    component:()=>import('@/pages/warehouse'),
+    meta:{
+        title:'仓库'
+    }
+}
+]
 
 Vue.use(Router)
 

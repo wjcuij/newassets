@@ -64,19 +64,35 @@
       </li>
       <li>
         <van-cell-group>
-          <van-field v-model="list.remark" rows="1" autosize label="备注" type="textarea" placeholder="请输入备注" :error="errorList.remark" />
+          <!-- <van-field v-model="list.remark" rows="1" autosize label="备注" type="textarea" placeholder="请输入备注" :error="errorList.remark" /> -->
+
+  <van-field
+    v-model="message"
+    rows="2"
+    autosize
+    label="备注"
+    type="textarea"
+    
+    placeholder="请输入备注"
+    show-word-limit
+  />
+
         </van-cell-group>
       </li>
-      <li>
-        <van-uploader :after-read="afterRead" />
-        <span>上传图片</span>
-
+      <li class="upload">
+        <p style="text-align:left;font-weight: 800;font-size: 16px;">上传图片</p>
+        <!-- <van-uploader :after-read="afterRead" /> -->
+        <van-uploader :after-read="afterRead" v-model="fileList" :max-count="1"/>
       </li>
+
     </ul>
+    <button class="add-btn">增加资产</button>
     <!--选择项弹出层-->
     <van-popup v-model="showPicker" position="bottom">
+
       <!--时间选择-->
       <van-datetime-picker v-model="currentDate" v-if="showPickerItem == 3" type="date" :min-date="minDate" @confirm="onConfirm" />
+      
       <!--选择项-->
       <van-picker show-toolbar :columns="columns[showPickerItem]" v-else @cancel="showPicker = false" @confirm="onConfirm" />
     </van-popup>
@@ -88,6 +104,21 @@
 </template>
 <style lang="scss">
 #add-assets {
+  .upload{
+    text-align: left;
+    padding-left:16px;
+  }
+  .add-btn {
+    width: 89%;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    
+    height: 50px;
+    margin: 20px 0;
+    background-image: -webkit-linear-gradient(0deg, #7be0f4, #6be6f8, #628bfb);
+  }
   /*修改资产样式*/
   .van-field--error .van-field__control {
     color: #6088ff !important;
@@ -118,6 +149,9 @@
   input:-ms-input-placeholder {
     color: #ccc;
   }
+  .van-uploader__upload{
+    border-style: dotted;
+  }
 }
 </style>
 <script>
@@ -136,7 +170,7 @@ export default {
       currentDate: new Date(),
       username: "",
       message: "",
-      
+      fileList: [],//图片列表
       value: "",
       showPicker: false,//选择项弹出层
       showPickerItem:0,//弹出哪个层

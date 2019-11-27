@@ -23,7 +23,7 @@
             </van-tab>
             <van-tab title="房间汇总">
                 <div style="padding:0 10px;">
-                    <div class="room">
+                    <router-link to="/assemble/detail" tag="div" class="room">
                             <div class="room-detail">
                                 <img src="@/assets/140809.jpeg" alt="">
                                 <div class="room-txt">
@@ -35,8 +35,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="room">
+                        </router-link>
+                        <router-link to="/assemble/detail" tag="div" class="room">
                             <div class="room-detail">
                                 <img src="@/assets/140809.jpeg" alt="">
                                 <div class="room-txt">
@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                 </div>
             </van-tab>
         </van-tabs>
